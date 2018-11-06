@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/stats', to: 'stats#index'
   resources :authors, only: %i[show index] do
     resources :posts, only: %i[show index new edit]
   end
